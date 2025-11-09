@@ -1,0 +1,24 @@
+.vessel-map-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.vessel-map-container h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.leaflet-container {
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.leaflet-popup-content {
+  margin: 10px;
+}
+
+.leaflet-popup-content strong {
+  color: #1976d2;
+}
