@@ -9,6 +9,15 @@ A full-stack web application for managing and visualizing maritime vessel fleets
 - Node.js (v14 or higher)
 - npm
 
+**Dependencies not installed:**
+
+```bash
+# Install all dependencies
+npm install      # Root
+cd server && npm install
+cd client && npm install
+```
+
 ### Quick Start (Single Command)
 
 From the project root directory:
@@ -20,28 +29,6 @@ npm start
 This will start both the backend server (port 5000) and frontend client (port 3000) concurrently.
 
 The application will automatically open in your browser at `http://localhost:3000`
-
-### Alternative: Manual Start
-
-If you prefer to run server and client separately:
-
-**Terminal 1 - Backend:**
-
-```bash
-cd server
-npm install
-npm start
-```
-
-**Terminal 2 - Frontend:**
-
-```bash
-cd client
-npm install
-npm start
-```
-
----
 
 ## 📋 Features
 
@@ -84,38 +71,6 @@ npm start
 - React Leaflet for interactive maps
 - Material-UI for consistent styling
 - Responsive design
-
----
-
-## 📁 Project Structure
-
-```
-windward-assignment/
-├── README.md
-├── package.json (root - runs both server & client)
-├── server/
-│   ├── server.js (Express API)
-│   ├── package.json
-│   └── data/
-│       ├── vessels.json
-│       ├── fleets.json
-│       └── vesselLocations.json
-└── client/
-    ├── package.json
-    ├── public/
-    └── src/
-        ├── App.js (Router configuration)
-        ├── components/
-        │   ├── FleetList.js (Main fleet table)
-        │   ├── FleetDetail.js (Fleet detail page)
-        │   ├── VesselTable.js (Sortable vessel table)
-        │   ├── VesselMap.js (Leaflet map component)
-        │   └── SearchBar.js (Search filters)
-        └── services/
-            └── api.js (Axios API calls)
-```
-
----
 
 ## 🛠️ Technology Stack
 
@@ -233,44 +188,3 @@ The architecture supports easy additions:
 3. **API Service**: Add function in `client/src/services/api.js`
 
 ---
-
-## 🐛 Troubleshooting
-
-**Port already in use:**
-
-```bash
-# Kill process on port 5000 (backend)
-lsof -ti:5000 | xargs kill -9
-
-# Kill process on port 3000 (frontend)
-lsof -ti:3000 | xargs kill -9
-```
-
-**Dependencies not installed:**
-
-```bash
-# Install all dependencies
-npm install      # Root
-cd server && npm install
-cd client && npm install
-```
-
-**CORS errors:**
-
-- Ensure backend is running before frontend
-- Check that CORS is enabled in server.js
-
----
-
-## 📄 License
-
-This project was created for the Windward Technical Support Engineer assignment.
-
----
-
-## 👤 Author
-
-**Omer Ben David**
-
-- GitHub: [Your GitHub]
-- Email: omerbenda98@gmail.com
